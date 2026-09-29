@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input:focus{
+            box-shadow: 5px 5px 5px blue;
+        }
+        button:active{
+            background-color: red;
+        }
+        a:link{
+            color: green;
+        }
+        a:visited{
+            color: rgb(255, 0, 0);
+        }
+        p::before{
+            content: "🌟";
+            background-color: red;
+            padding: 5px 8px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <input>
+    <button>Login</button>
+    <a href="position.html">Test Link</a>
+    <a href="responsive.html">Demo Link</a>
+    <p>Star</p>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Use name</label>
+    <input id="name" type="text" placeholder="Enter your name">
+    <button onclick="UserMessage()">Submit</button>
+    <p id="test"></p>
+    <script>
+        function UserMessage(){
+            let username = document.getElementById("name").value;
+            alert(`Welcome ${username}`);
+            document.getElementById("test").innerText=`Html
+            css
+            js`
+        }
+
+        function DemoFunction(username="Unknown"){
+            let a = [1,2,3];
+            let b = [...a,10,20];
+            console.log(b);
+            alert(`welcome ${username}`);
+        }
+        DemoFunction();
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            border: 1px solid black;
+            width: 100vw;
+            height: 100vh;
+            background-color: lightblue;
+            position: relative;
+            /* bottom: 30px; */
+        }
+        .child{
+            width: 200px;
+            height: 200px;
+            background-color: black;
+            position: absolute;
+            bottom: 30px;
+        }
+        .post{
+            position: fixed;
+            right: 10px;
+            top: 0px;
+            width: 100px;
+            height: 100px;
+            background-color: lightcoral;
+        }
+        .header{
+            position: sticky;
+            top: 0px;
+            height: 100px;
+            width: 150px;
+            background-color: red;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, iure ad distinctio placeat dolor, corrupti quam natus non sed expedita excepturi eligendi alias incidunt. Provident delectus vitae voluptates obcaecati quibusdam praesentium nulla in, sint debitis! Impedit dicta provident aliquid hic adipisci at assumenda, eveniet neque repellat qui esse necessitatibus laboriosam illum eaque explicabo sit nobis! Impedit animi hic saepe ab, natus est nihil, non voluptatum et nisi quo consequuntur ut! Modi veritatis unde, sunt reiciendis debitis architecto itaque facilis similique. Inventore itaque vitae sapiente voluptate unde assumenda, magnam commodi laboriosam eaque, temporibus, nostrum accusantium! Aut fugiat iusto sunt ex qui!</div>
+    <div class="header"></div>
+    <div class="parent">
+        <div class="child"></div>
+    </div>
+    <div class="post"></div>
+</body>
+</html>

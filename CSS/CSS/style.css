@@ -1,0 +1,39 @@
+*{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin:0px;
+    padding: 0px;
+}
+p{
+    color: green;
+    text-transform: capitalize;
+}
+.color{
+    color: blueviolet;
+}
+#home{
+    /* background-color: lightgreen; */
+    font-size: 20px;
+}
+.box{
+    background-color: lightblue;
+    padding: 20px;
+    border: 3px solid black;
+    margin: 20px;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    text-decoration: underline;
+    box-shadow: 4px 4px 5px gray;
+    border-radius: 10px;
+}
+a{
+    text-decoration: none;
+}
+.uppercase{
+    text-transform: uppercase;
+}
+.space{
+    text-indent: 50px;
+    line-height: 50px;
+    text-shadow: 8px 5px 6px gray;
+}

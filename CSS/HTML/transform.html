@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .transform{
+            width: 100px;
+            height: 50px;
+            margin: 10px;
+            /* animation-name: move; */
+            animation-duration: 5s; 
+            animation-iteration-count: infinite;
+            animation-direction:  alternate;
+            position: relative;
+        }
+        @keyframes move{
+            from{
+                left: 0px;
+            }
+            to{
+                left: 900px;
+            }
+        }
+        .ease{
+            background: lightblue;
+            animation-timing-function: ease;
+        }
+        .easein{
+            background: lightgreen;
+            animation-timing-function: ease-in;
+        }
+        .easeout{
+            background: lightcoral;
+            animation-timing-function: ease-out;
+        }
+        .easeinout{
+            background: lightseagreen;
+            animation-timing-function: ease-in-out;
+        }
+        .linear{
+            background: lightslategray;
+            animation-timing-function: linear;
+        }
+        .directions{
+            height: 50px;
+            width: 50px;
+            background-color: yellow;
+            animation: box 4s infinite alternate;
+            position: relative;
+        }
+        @keyframes box{
+            0%{
+                top: 0px;
+                left: 0px;
+            }
+            25%{
+                top: 60px;
+                left: 100px;
+            }
+            50%{
+                top: 0px;
+                left: 200px;
+            }
+            75%{
+                top: 60px;
+                left: 300px;
+            }
+            100%{
+                top: 0px;
+                left: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="transform ease"></div>
+    <div class="transform easein"></div>
+    <div class="transform easeout"></div>
+    <div class="transform easeinout"></div>
+    <div class="transform linear"></div> -->
+    <div class="directions"></div>
+</body>
+</html>

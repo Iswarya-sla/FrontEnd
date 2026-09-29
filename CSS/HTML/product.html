@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #products{
+            display: grid;
+            grid-template-columns: repeat(2,300px);
+            justify-content: center;
+            gap: 20px;
+        }
+        .items{
+            /* border: 1px solid black; */
+            box-shadow: 2px 2px 5px gray;
+            border-radius: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="HeaderPage"></div>
+    <div id="products"></div>
+    <input type="file">
+    <script>
+        function getData(){
+            return new Promise((resolve,reject)=>{
+                fetch("../JS/products.json")
+                .then(result=>result.json())
+                .then(data=>resolve(data))
+                .catch(error=>reject(error))
+            })
+        }
+
+        async function CheckData(){
+            debugger
+            let result = await getData();
+            if(result.length>0){
+                let product = document.getElementById("products");
+                for(let singleProduct of result){
+                        product.innerHTML += `<div class="items">
+                            <img src=${singleProduct.image} alt=${singleProduct.title} width="200px">
+                            <h2>${singleProduct.title}</h2>
+                            <p>${singleProduct.price}</p>
+                            </div>`
+                }
+            }
+            else{
+                console.log("Data not added");
+            }
+        }
+        CheckData();
+
+        fetch("./header.html")
+        .then(result=>result.text())
+        .then(data=>document.getElementById("HeaderPage").innerHTML=data);
+    </script>
+</body>
+</html>

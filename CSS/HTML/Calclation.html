@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <id id="HeaderPage"></id>
+    <input id="Number1">
+    <input id="Number2">
+    <button onclick="Calculation('add')">+</button>
+    <button onclick="Calculation('sub')">-</button>
+    <button onclick="Calculation('mult')">*</button>
+    <button onclick="Calculation('div')">/</button>
+    <p id="answer"></p>
+    <script>
+        function Calculation(option){
+            let num1 = Number(document.getElementById("Number1").value);
+            let num2 = Number(document.getElementById("Number2").value);
+            let answer = document.getElementById("answer");
+            switch(option){
+                case 'add':
+                    answer.innerText = `Your answer is: ${num1+num2}`;
+                    break;
+                case 'sub':
+                    answer.innerText = `Your answer is: ${num1-num2}`;
+                    break;
+                case 'mult':
+                    answer.innerText = `Your answer is: ${num1*num2}`;
+                    break;
+                case 'div':
+                    answer.innerText = `Your answer is: ${num1/num2}`;
+                    break;
+                default:
+                    answer.innerHTML = "<b>Invalid Operation</b>";
+            }
+        }
+        fetch("./header.html")
+        .then(result=>result.text())
+        .then(data=>document.getElementById("HeaderPage").innerHTML=data);
+    </script>
+</body>
+</html>

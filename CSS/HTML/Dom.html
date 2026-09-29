@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="test">DOM intro</h1>
+    <form>
+        <label>User name</label>
+        <input id="username">
+        <label>Password</label>
+        <input type="password" id="password">
+        <button id="submitbtn">Click</button>
+    </form>
+    <p id="test"></p>
+    <script>
+        let btn = document.getElementById("submitbtn");
+        btn.addEventListener("click",UserValidation);
+        
+        function UserValidation(){
+            event.preventDefault();
+            debugger
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+            let message = document.getElementById("test");
+            if(username=="admin" && password=="admin@123"){
+                message.style.color = "green";
+                message.style.background = "lightblue";
+                message.innerText = "Welcome user";
+            }
+            else{
+                message.style.color = "red";
+                message.innerHTML = "<b>Invalid username or password</b>";
+            }
+        }
+        
+    </script>
+</body>
+</html>

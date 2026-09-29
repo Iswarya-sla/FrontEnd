@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #products{
+            display: grid;
+            grid-template-columns: repeat(2, 300px);
+            justify-content: center;
+            gap: 20px;
+        }
+        .item{
+            /* border: 1px solid black; */
+            box-shadow: 1px 2px 5px gray;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="products"></div>
+    <script>
+        function GetData(){
+            return new Promise((resolve, reject)=>{
+                fetch("../JS/products.json")
+                .then(result=>result.json())
+                .then(data=>resolve(data))
+                .catch(error=>reject("Data is empty"))
+            })
+        }
+        async function DisplayProducts(){
+            let result = await GetData();
+            let products = document.getElementById("products");
+            if(result.length>0){
+                for(var singleproduct of result){
+                    products.innerHTML += `<div class="item">
+                        <img src=${singleproduct.image} alt=${singleproduct.title} width="200px">
+                        <h2>${singleproduct.title}</h2>
+                        <p>${singleproduct.price}</p>
+                        </div>`
+                }
+            }
+            else{
+                products.innerHTML = "<b>Empty</b>"
+            }
+        }
+        DisplayProducts();
+    </script>
+</body>
+</html>

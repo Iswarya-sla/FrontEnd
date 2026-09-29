@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #mobile, #menubar{
+            display: none;
+        }
+        @media (max-width:350px) {
+            #menubar{
+                display: block;
+            }
+            #mobileNavbar{
+                display: flex;
+                flex-direction: column;
+            }
+            #default{
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav id="default">
+            <a href="">Home</a>
+            <a href="">About</a>
+            <a href="">Contact</a>
+        </nav>
+        <p id="menubar"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+</svg></p>
+        <div id="mobile">
+        <nav id="mobileNavbar">
+            <a href="">Home</a>
+            <a href="">About</a>
+            <a href="">Contact</a>
+            <a href="">Demo</a>
+        </nav>
+        </div>
+    </header>
+    <!-- <form id="loginform">
+        <input>
+        <input type="password">
+        <button type="submit">Submit</button>
+    </form> -->
+    <script>
+        let menubar = document.getElementById("menubar");
+        menubar.addEventListener("click",()=>{
+            let displayValue = document.getElementById("mobile").style.display;
+            displayValue=="block" ? document.getElementById("mobile").style.display="none" : document.getElementById("mobile").style.display="block"
+        })
+        document.getElementById("default").addEventListener("mouseover",()=>{
+            event.preventDefault();
+            document.body.style.backgroundColor="black";
+        })
+        document.getElementById("default").addEventListener("mouseout",()=>{
+            event.preventDefault();
+            document.body.style.backgroundColor="white";
+        })
+
+        document.getElementById("loginform").addEventListener("submit")
+    </script>
+</body>
+</html>

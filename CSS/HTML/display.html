@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* p{
+            display: block;
+        } */
+         .box{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 20px;
+            text-align: center;
+         }
+         .item{
+            border: 1px solid black;
+         }
+         .box .item{
+            /* flex:1; */
+         }
+         a{
+            text-decoration: none;
+            color: black;
+         }
+         nav{
+            height: 300px;
+            width: 500px;
+            border: 1px solid black;
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            align-items: center;
+         }
+         .list{
+            display: inline-block;
+         }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <li type="none"><a href="">Home</a></li>
+            <li type="none"><a href="">About</a></li>
+            <li type="none"><a href="">Contact</a></li>
+            <li type="none"><a href="">Projects</a></li>
+            <li type="none"><a href="">Demo</a></li>
+        </nav>
+    </header>
+    <div class="box">
+        <p class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi facilis vel dolorum porro excepturi pariatur, unde voluptas odio assumenda voluptatum!</p>
+        <p class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, quos?</p>
+        <p class="item">Lorem ipsum dolor sit amet consectetur.</p>
+        <p class="item">Lorem ipsum dolor sit amet.</p>
+        <p class="item" style="display: none;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, quos?</p>
+        <p class="item" style="visibility: hidden;">Lorem ipsum dolor sit amet consectetur.</p>
+        <p class="item">Lorem ipsum dolor sit amet.</p>
+    </div>
+    <div class=" list">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi facilis vel dolorum porro excepturi pariatur, unde voluptas odio assumenda voluptatum!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, quos?</p>
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, quos?</p>
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+[
+    {
+        "title":"Laptop",
+        "price":25600,
+        "image":"../Images/laptop.jpg"
+    },
+    {
+        "title":"Mobile",
+        "price":25000,
+        "image":"../Images/mobile.jpg"
+    },
+    {
+        "title":"Headphone",
+        "price":5600,
+        "image":"../Images/headphone.jpg"
+    }
+]

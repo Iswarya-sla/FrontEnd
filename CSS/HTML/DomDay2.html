@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #testimage{
+            display: none;
+        }
+        #div1{
+            margin: 20px;
+            width: 200px;
+            height: 200px;
+            background-color: lightcoral;
+        }
+        .NewStyles{
+            transform: scale(1.2);
+            transition: 2s;
+            background-color: lightblue !important;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="testinput">
+    <p id="inputtext"></p>
+    <script>
+        let input = document.getElementById("testinput");
+        input.addEventListener("input",Displaytext)
+        function Displaytext(){
+            document.getElementById("inputtext").innerText = input.value;
+        }
+    </script>
+</body>
+</html>

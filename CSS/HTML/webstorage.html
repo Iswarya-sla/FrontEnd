@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="username" placeholder="Enter your name">
+    <button onclick="SaveNAme()">Save</button>
+    <button onclick="ViewNAme()">View</button>
+    <button onclick="RemoveName()">Remove</button>
+    <p id="result"></p>
+    <script>
+        let name;
+        function SaveNAme() {
+            name = document.getElementById("username").value;
+            // sessionStorage.setItem("Username",name);
+            localStorage.setItem("Username", name);
+        }
+        function ViewNAme() {
+            // document.getElementById("result").innerHTML=sessionStorage.getItem("Username");
+            document.getElementById("result").innerHTML = localStorage.getItem("Username");
+        }
+        function RemoveName() {
+            // sessionStorage.removeItem("Username");
+            localStorage.removeItem("Username");
+        }
+    </script>
+</body>
+
+</html>

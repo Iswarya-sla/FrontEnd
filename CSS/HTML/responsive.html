@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 20px;
+            text-align: center;
+         }
+         .item{
+            border: 1px solid black;
+         }
+         @media (min-width:577px) and (max-width:768px){
+            .box{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 20px;
+            text-align: center;
+         }
+         .item{
+            border-radius: 5px;
+         }
+        }
+         @media (max-width:576px){
+            .box{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 20px;
+            text-align: center;
+         }
+         }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi facilis vel dolorum porro excepturi pariatur, unde voluptas odio assumenda voluptatum!</p>
+        <p class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, quos?</p>
+        <p class="item">Lorem ipsum dolor sit amet consectetur.</p>
+        <p class="item">Lorem ipsum dolor sit amet.</p>
+        <p class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, quos?</p>
+        <p class="item">Lorem ipsum dolor sit amet consectetur.</p>
+        <p class="item">Lorem ipsum dolor sit amet.</p>
+        <p class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi facilis vel dolorum porro excepturi pariatur, unde voluptas odio assumenda voluptatum!</p>
+        <p class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, quos?</p>
+        <p class="item">Lorem ipsum dolor sit amet consectetur.</p>
+        <p class="item">Lorem ipsum dolor sit amet.</p>
+        <p class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, quos?</p>
+        <p class="item">Lorem ipsum dolor sit amet consectetur.</p>
+        <p class="item">Lorem ipsum dolor sit amet.</p>
+    </div>
+</body>
+</html>

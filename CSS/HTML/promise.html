@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let question = 0;
+        // let test = setInterval(()=>{ // setTimeout(work(function),delayTime)
+        //     question++;
+        //     console.log("Welcome");
+        //     console.log("MEssge 2");
+        //     if(question == 4){
+        //         clearInterval(test);
+        //     }
+        // },2000);
+        // console.log("Test text");
+        // let apidata = [];
+        // fetch("https://jsonplaceholder.typicode.com/users")
+        // .then(response=>response.json())
+        // .then(data=>apidata.push(data));
+        // console.log(apidata);
+
+        let result = new Promise((resolve,reject)=>{
+            let apidata = [];
+            fetch("https://jsonplaceholder.typicode.com/users")
+            .then(response=>response.json())
+            .then(data=>{apidata.push(data); console.log(apidata.length);});
+            setTimeout(()=>{
+                if(apidata.length>0){
+                    resolve("Data added in your list");
+                }
+                else{
+                    reject("Data not added");
+                }
+            },2000)
+        })
+        result.then(message=>console.log("then",message))
+        .catch(error=>console.log("catch",error));
+    </script>
+</body>
+</html>
